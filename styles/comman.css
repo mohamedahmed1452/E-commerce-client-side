@@ -1,115 +1,96 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI';
-    color: #f8f9fa;
-    background-color: #2d3748;
+  font-family: 'Segoe UI';
+  color: #f8f9fa;
+  background-color: #2d3748;
 }
 
-
-
-
-.header{
-    width: 100%;
-    background: #1a202c;
-    position: fixed;
-    top: 0;
-    z-index: 100;
+.header {
+  width: 100%;
+  background: #1a202c;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 .container {
-    max-width: 1200px;
-    margin: 0px auto;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
 }
 
-.logo a{
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #6c8eff;
-    text-decoration: none;
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6c8eff;
+  text-decoration: none;
 }
-
-
 
 .nav-bar .links {
-    display: flex;
-    list-style: none;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
 .nav-bar .links li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .nav-bar .links a {
-    text-decoration: none;
-    color: #f8f9fa;
-    font-weight: 500;
-    
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 500;
 }
 
-
-
-
-.nav-bar .links  a:hover  {
-    color: #7c6bff;
+.nav-bar .links a:hover {
+  color: #7c6bff;
 }
-
-
-
-
 
 .nav-bar .links .badge {
-    background-color: #ff6b6b;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 600;
-    color: white; 
-    position: absolute;
-    bottom: 15px;
-    left: 8px;
-
+  background-color: #ff6b6b;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  left: 8px;
 }
 .icon-badge {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
-
 
 .mobile-menu .bn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 25px;
-    color: #f8f9fa;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #f8f9fa;
 }
 
-.main-container{
-    min-height:68vh;
+.main-container {
+  min-height: 68vh;
 }
-
-
-
 
 .products-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
 }
 
 .product-card {
@@ -124,7 +105,9 @@ body {
   object-fit: contain;
 }
 
-.product-info { padding: 15px; }
+.product-info {
+  padding: 15px;
+}
 
 .product-title {
   font-size: 20px;
@@ -164,7 +147,7 @@ body {
 }
 
 .btn-favorite {
-background:none ;
+  background: none;
   color: #aaa;
   font-size: 25px;
   border: none;
@@ -172,55 +155,37 @@ background:none ;
 }
 
 .btn-favorite.active {
-    color: #ff6b6b;
+  color: #ff6b6b;
 }
-
-
-
-
 
 .section-title {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 40px;
-    color: #6c8eff;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 40px;
+  color: #6c8eff;
 }
 
-
 .empty-state {
-    text-align: center;
-    padding: 20px 0;
-    color: #a0aec0;
-    position: relative;
-    font-size:30px
+  text-align: center;
+  padding: 20px 0;
+  color: #a0aec0;
+  position: relative;
+  font-size: 30px;
 }
 
 .empty-state i {
-    font-size: 100px;
-    margin-bottom: 20px;
+  font-size: 100px;
+  margin-bottom: 20px;
 }
 
-
-
-
-
-
-.btn-browse-products{
+.btn-browse-products {
   font-size: 22px;
   background: #6f6cff;
   color: white;
-  padding:  12px;
+  padding: 12px;
   border-radius: 10px;
   text-decoration: none;
 }
-
-
-
-
-
-
-
-
 
 .notification {
   position: fixed;
@@ -230,104 +195,83 @@ background:none ;
   border-radius: 10px;
   z-index: 1000;
   color: #fff;
-  display: none; 
+  display: none;
   font-size: 16px;
- 
 }
-.notification.add{
-     background-color: #28a745; 
+.notification.add {
+  background-color: #28a745;
 }
-.notification.remove{
-     background-color:  #ff6b6b;; 
+.notification.remove {
+  background-color: #ff6b6b;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .site-footer {
-    margin-top: 120px;
-    height: 120px;
-    background: #1a202c;
-    color: #fff;
-    padding: 20px 0;
-    font-size: 22px;
+  margin-top: 120px;
+  height: 120px;
+  background: #1a202c;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 22px;
 }
 
 .footer-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .footer-links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 .footer-links a {
-    color: #fff;
-    font-size: 28px;
+  color: #fff;
+  font-size: 28px;
 }
 .footer-links a:hover {
-    color: #6c8eff;
+  color: #6c8eff;
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+  .header-content {
+    max-width: 350px;
+    margin: 0px auto;
+    flex-wrap: wrap;
+  }
 
-    .container{
-        max-width: 300px;
-        margin: 0px auto;
-    }
-    .header-content {
-        max-width: 350px;
-        margin: 0px auto;
-        flex-wrap: wrap;
-    }
+  .nav-bar {
+    width: 100%;
+  }
 
-    .nav-bar {
-        width: 100%;
-    }
-
-    .nav-bar .links {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 30px;
-        gap:20px;
-    
-    }
- .mobile-menu .bn {
-        display: block;
-    }
-    .nav-bar .show {
-        display: flex;
-    }
-
-
-
-    .products-flex{
+  .nav-bar .links {
+    display: none;
     flex-direction: column;
-    }
-    .product-card{
-        width: 100%;
-    }
-      .product-image {
-      height: 130px;
-}
+    align-items: flex-start;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .mobile-menu .bn {
+    display: block;
+  }
+  .nav-bar .show {
+    display: flex;
+  }
 
-    
-    .notification {
-     bottom: 100px;
-     left: 30%;
+  .products-flex {
+    flex-direction: column;
+  }
+  .product-card {
+    width: 100%;
+  }
+  .product-image {
+    height: 130px;
+  }
 
-    }
-
+  .notification {
+    bottom: 100px;
+    left: 30%;
+  }
 }
