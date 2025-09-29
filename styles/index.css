@@ -1,69 +1,58 @@
 .hero {
-    padding-top: 80px;
-    height: 100vh;
-    background-image: url('../assets/arrangement-black-friday-shopping-carts-with-copy-space_23-2148667047.jpg') ;
-    background-size: 100% 100%;
+  padding-top: 80px;
+  height: 100vh;
+  background-image: url('../assets/ecommerce-laptop-computer-shopping-trolley-white-gift-blue-ribbon-dark-background-website-retail-business-concept-easy-218161920.webp');
+  background-size: 100% 100%;
+  object-fit: contain;
 }
 
 .hero .container {
-    max-width: 500px;
-    margin: 12% auto; 
-    text-align: center;
-    color: #ffffff;
-    animation: moveDownToUp 3s  ease-in-out;
+  max-width: 500px;
+  margin: 12% auto;
+  text-align: center;
+  color: #ffffff;
+  animation: moveDownToUp 3s ease-in-out;
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-
+  font-size: 60px;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 @keyframes moveDownToUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-
 
 .btn-show-container {
-    text-align: center;
-    margin-top: 50px ;
+  text-align: center;
+  margin-top: 50px;
 }
-
-
-
-
 
 @media (max-width: 768px) {
-
-    .hero {
-        height: 600px;
-        padding-top: 150px;
-    }
-    .hero .container {
+  .hero {
+    height: 600px;
+    padding-top: 150px;
+  }
+  .hero .container {
     max-width: 250px;
-    }
-    
-    .hero h1 {
-        font-size: 40px;
-    }
-    
-    .hero p {
-        font-size: 20px;
-    } 
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
 }
-
-
-
-
