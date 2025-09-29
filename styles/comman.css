@@ -133,23 +133,28 @@ body {
 
 .product-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap:  100px;
 }
 
 .btn-cart {
-  font-size: 18px;
-  background: #6c8eff;
-  color: white;
+  background: none;
+  color:grey;
+  font-size: 30px;
   border: none;
   padding: 6px 12px;
   border-radius: 5px;
   text-decoration: none;
+  cursor: pointer;
+}
+.btn-cart.active {
+  color : #28a745;
 }
 
 .btn-favorite {
   background: none;
   color: #aaa;
-  font-size: 25px;
+  font-size: 30px;
   border: none;
   cursor: pointer;
 }
