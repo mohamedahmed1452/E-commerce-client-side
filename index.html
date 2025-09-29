@@ -6,96 +6,91 @@
     <title>MiniMart - Your Mini E-commerce Store</title>
     <link rel="stylesheet" href="styles/comman.css" />
     <link rel="stylesheet" href="styles/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="styles/all.min.css" />
   </head>
   <body>
-    <!-- Header with Navigation -->
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <a href="index.html" class="logo">MohamedMarket</a>
-
-          <button class="mobile-menu-btn">
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="index.html">Mini Markt</a>
+        </div>
+        <div class="mobile-menu">
+          <button class="bn">
             <i class="fas fa-bars"></i>
           </button>
-
-          <ul class="nav-links">
+        </div>
+        <div class="nav-bar">
+          <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li>
-              <a href="favorites.html"
-                >Favorites <span class="badge" id="favorites-count">0</span></a
-              >
+              <a href="favorites.html">
+                <span class="icon-badge">
+                  <i class="fas fa-heart"></i>
+                  <span class="badge" id="favorites-count"></span>
+                </span>
+                Favorites
+              </a>
             </li>
             <li>
-              <a href="cart.html"
-                >Cart <span class="badge" id="cart-count">0</span></a
-              >
+              <a href="cart.html">
+                <span class="icon-badge">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="badge" id="cart-count"></span>
+                </span>
+                Cart
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h1>Shop Smarter, Save More!</h1>
-        <p>Discover amazing deals and products you’ll love.</p>
+        <h1>Welcome to Mini Markt</h1>
+        <p>
+          Shop more, spend less it''s that simple.
+        </p>
       </div>
     </section>
 
-    <!-- Featured Products -->
     <main class="container">
-      <section id="featured">
         <h2 class="section-title">Featured Products</h2>
-        <div class="loading">
-          <div class="spinner"></div>
+        <div class="products-flex" id="featured-products"></div>
+        <div class="btn-show-container">
+          <a href="products.html" class="btn-browse-products"
+            >Browse Products</a
+          >
         </div>
-        <div class="products-grid" id="featured-products">
-          <!-- Featured products will be loaded here -->
-        </div>
-
-        <div class="cta-container">
-          <a href="products.html" class="btn btn-primary">View All Products</a>
-        </div>
-      </section>
     </main>
+    <div id="notification" class="notification"></div>
 
-    <!-- Footer -->
+
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-info">
-          <span>Created by Mohamed</span>
-          <div class="footer-links">
-            <a
-              href="https://github.com/mohamedahmed1452"
-              target="_blank"
-              title="GitHub"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://linkedin.com/in/your-linkedin"
-              target="_blank"
-              title="LinkedIn"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:20201700656@cis.asu.edu.eg" title="Gmail">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
+      <div class="footer-info">
+        <h3>Created by Mohamed</h3>
+        <div class="footer-links">
+          <a
+            href="https://github.com/mohamedahmed1452"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/your-linkedin"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:20201700656@cis.asu.edu.eg" title="Gmail">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
       </div>
     </footer>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle">
-      <i class="fas fa-moon"></i>
-    </button>
 
     <script src="scripts/comman.js"></script>
     <script src="scripts/index.js"></script>

@@ -1,68 +1,66 @@
-// Products page specific script
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize the app
-  initApp();
-
-  // Load all products
-  fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    .then((products) => {
-      window.allProducts = products;
-      document.querySelector(".loading").style.display = "none";
-      renderProducts(products, "products-container");
-      populateCategories(products);
-    })
-    .catch((error) => {
-      console.error("Error loading products:", error);
-      document.querySelector(".loading").innerHTML =
-        "<p>Error loading products. Please try again later.</p>";
-    });
-
-  // Set up search and filter
+document.addEventListener("DOMContentLoaded", initProductPage);
+function initProductPage() {
+  main();
+  loadProducts();
   document
     .getElementById("search-input")
-    .addEventListener("input", filterProducts);
+    .addEventListener("input", filterBySearch);
+
   document
     .getElementById("category-filter")
-    .addEventListener("change", filterProducts);
-});
-
-function filterProducts() {
-  const searchTerm = document
-    .getElementById("search-input")
-    .value.toLowerCase();
-  const category = document.getElementById("category-filter").value;
-
-  let filteredProducts = window.allProducts;
-
-  if (searchTerm) {
-    filteredProducts = filteredProducts.filter((product) =>
-      product.title.toLowerCase().includes(searchTerm)
-    );
-  }
-
-  if (category) {
-    filteredProducts = filteredProducts.filter(
-      (product) => product.category === category
-    );
-  }
-
-  renderProducts(filteredProducts, "products-container");
+    .addEventListener("change", filterByCategory);
 }
 
-function populateCategories(products) {
-  const categories = [...new Set(products.map((p) => p.category))];
-  const categoryFilter = document.getElementById("category-filter");
+function filterBySearch() {
+  let search = document
+    .getElementById("search-input")
+    .value.toLowerCase();
+  let productsFiltered = [];
+  let products = JSON.parse(localStorage.getItem("allProducts")) || [];
 
-  // Clear existing options except the first one
-  while (categoryFilter.options.length > 1) {
-    categoryFilter.remove(1);
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+    if (search === "" || product.title.toLowerCase().includes(search)) {
+      productsFiltered.push(product);
+    }
+  }
+  renderProducts(productsFiltered, "products-container");
+}
+
+function filterByCategory() {
+  const category = document.getElementById("category-filter").value;
+  let productsFiltered = [];
+  let products = JSON.parse(localStorage.getItem("allProducts")) || [];
+
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+    if (category === "" || product.category === category) {
+      productsFiltered.push(product);
+    }
   }
 
-  categories.forEach((category) => {
-    const option = document.createElement("option");
-    option.value = category;
-    option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-    categoryFilter.appendChild(option);
-  });
+  renderProducts(productsFiltered, "products-container");
+}
+
+function loadProducts() {
+  let products = JSON.parse(localStorage.getItem("allProducts")) || [];
+  renderProducts(products, "products-container");
+  createDropDownList(products);
+}
+
+function createDropDownList(products) {
+  let categoryFilter = document.getElementById("category-filter");
+
+  // Get unique categories with Set
+  const categories = new Set();
+  for (let i = 0; i < products.length; i++) {
+    categories.add(products[i].category);
+  }
+
+  let cartona = `<option value="">All Categories</option>`;
+  for (let category of categories) {
+    cartona += `<option value="${category}">${category}</option>`;
+  }
+
+  categoryFilter.innerHTML = cartona;
 }

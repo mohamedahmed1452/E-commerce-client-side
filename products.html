@@ -6,48 +6,52 @@
     <title>Products - MiniMart</title>
     <link rel="stylesheet" href="styles/comman.css" />
     <link rel="stylesheet" href="styles/products.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="styles/all.min.css" />
   </head>
   <body>
-    <!-- Header with Navigation -->
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <a href="index.html" class="logo">MiniMart</a>
 
-          <button class="mobile-menu-btn">
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="index.html">Mini Markt</a>
+        </div>
+        <div class="mobile-menu">
+          <button class="bn">
             <i class="fas fa-bars"></i>
           </button>
-
-          <ul class="nav-links">
+        </div>
+        <div class="nav-bar">
+          <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li>
-              <a href="favorites.html"
-                >Favorites <span class="badge" id="favorites-count">0</span></a
-              >
+              <a href="favorites.html">
+                <span class="icon-badge">
+                  <i class="fas fa-heart"></i>
+                  <span class="badge" id="favorites-count"></span>
+                </span>
+                Favorites
+              </a>
             </li>
             <li>
-              <a href="cart.html"
-                >Cart <span class="badge" id="cart-count">0</span></a
-              >
+              <a href="cart.html">
+                <span class="icon-badge">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="badge" id="cart-count"></span>
+                </span>
+                Cart
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </header>
 
-    <!-- Page Content -->
-    <main class="container">
+    <main class="container main-container">
       <h1 class="section-title">All Products</h1>
 
       <div class="filters">
-        <div class="search-box">
-          <i class="fas fa-search"></i>
+        <div class="search-filter">
           <input
             type="text"
             id="search-input"
@@ -58,25 +62,38 @@
         <div class="category-filter">
           <select id="category-filter">
             <option value="">All Categories</option>
-            <!-- Categories will be loaded dynamically -->
           </select>
         </div>
       </div>
 
-      <div class="loading">
-        <div class="spinner"></div>
-      </div>
-
-      <div class="products-grid" id="products-container">
-        <!-- Products will be loaded here -->
-      </div>
+      <div class="products-flex" id="products-container"></div>
     </main>
+    <div id="notification" class="notification"></div>
 
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle">
-      <i class="fas fa-moon"></i>
-    </button>
-
+    <footer class="site-footer">
+      <div class="footer-info">
+        <h3>Created by Mohamed</h3>
+        <div class="footer-links">
+          <a
+            href="https://github.com/mohamedahmed1452"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/your-linkedin"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:20201700656@cis.asu.edu.eg" title="Gmail">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
     <script src="scripts/comman.js"></script>
     <script src="scripts/products.js"></script>
   </body>

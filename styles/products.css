@@ -1,126 +1,85 @@
-/* Products Page Specific Styles */
+
+
 .filters {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 20px;
+    margin: 50px 0px;
     justify-content: center;
 }
 
-.search-box {
-    flex: 1;
-    min-width: 250px;
+.search-filter {
+    flex-grow: 1;
     max-width: 400px;
-    position: relative;
 }
 
-.search-box input {
+.search-filter input {
     width: 100%;
-    padding: 12px 15px 12px 40px;
-    border: 1px solid var(--border);
+    padding: 12px ;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 18px;
+    border-color: #4a5568;
 }
 
-.search-box i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--light-text);
-}
+
 
 .category-filter {
-    flex: 1;
-    min-width: 200px;
-    max-width: 300px;
+    flex-grow: 1;
+    max-width: 250px;
 }
 
 .category-filter select {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid var(--border);
+    max-width: 100%;   /* Prevent overflow */
+    padding: 12px;
     border-radius: 4px;
-    font-size: 1rem;
-    background-color: white;
+    font-size: 18px;
+    background-color: #2d3748;
+    color: #f8f9fa;
+    border: 1px solid #4a5568;
+    box-sizing: border-box;
+    cursor: pointer;
 }
-
-.dark-mode .category-filter select {
-    background-color: var(--secondary);
-    color: var(--text);
-    border-color: var(--border);
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-.product-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.dark-mode .product-card {
-    background-color: #374151;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 15px;
-}
-
-.product-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    height: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.product-price {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.product-category {
-    display: inline-block;
-    background-color: var(--secondary);
-    color: var(--light-text);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    margin-bottom: 15px;
-}
-
-.product-actions {
-    display: flex;
-    justify-content: space-between;
-}
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .filters {
+        flex-direction: column;
         gap: 15px;
+        margin: 30px 15px;
+        padding: 0;
     }
+
+    .search-filter {
+        max-width: 100%;
+    }
+
+    .search-filter input {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border: 2px solid #4a5568;
+        box-sizing: border-box;
+    }
+
+    .category-filter {
+        max-width: 100%;
+    }
+    .category-filter select {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border: 2px solid #4a5568;
+        box-sizing: border-box;
+    }
+      .category-filter option {
+        width: 100px;
+    }
+
+
 }
+
+
+
+
+
+
