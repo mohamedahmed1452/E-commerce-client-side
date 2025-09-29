@@ -1,0 +1,199 @@
+/* Home Page Specific Styles */
+
+/* Hero Section with Background Image */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.hero-images {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 500px;
+    background: url('../assets/reduce\ height\ of\ upl.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 500px;
+    background: url('../assets/Man\ with\ shopping\ coupon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+    margin-top: 420px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    color: #ffffff;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+
+#featured {
+    padding: 40px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.dark-mode .product-card {
+    background-color: #374151;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.product-category {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--light-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.site-footer {
+    background: #222;
+    color: #fff;
+    padding: 24px 0 16px 0;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+.site-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.footer-links {
+    display: flex;
+    gap: 18px;
+}
+.footer-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: var(--primary, #00bcd4);
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+     }
+    .hero {
+        min-height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+

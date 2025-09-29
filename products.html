@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - MiniMart</title>
+    <link rel="stylesheet" href="styles/comman.css" />
+    <link rel="stylesheet" href="styles/products.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header with Navigation -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">MiniMart</a>
+
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li>
+              <a href="favorites.html"
+                >Favorites <span class="badge" id="favorites-count">0</span></a
+              >
+            </li>
+            <li>
+              <a href="cart.html"
+                >Cart <span class="badge" id="cart-count">0</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="container">
+      <h1 class="section-title">All Products</h1>
+
+      <div class="filters">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+          />
+        </div>
+
+        <div class="category-filter">
+          <select id="category-filter">
+            <option value="">All Categories</option>
+            <!-- Categories will be loaded dynamically -->
+          </select>
+        </div>
+      </div>
+
+      <div class="loading">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="products-grid" id="products-container">
+        <!-- Products will be loaded here -->
+      </div>
+    </main>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="scripts/comman.js"></script>
+    <script src="scripts/products.js"></script>
+  </body>
+</html>
