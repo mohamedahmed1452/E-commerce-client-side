@@ -1,4 +1,4 @@
-let allProducts = [];
+let allProducts = JSON.parse(localStorage.getItem("allProducts")) || [];
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
@@ -40,6 +40,9 @@ function renderProducts(products, containerId) {
   container.innerHTML = cartona;
 }
 
+
+
+
 function mobileMenu() {
   const mobileMenuBtn = document.querySelector(".mobile-menu .bn");
   const navLinks = document.querySelector(".nav-bar .links");
@@ -48,11 +51,21 @@ function mobileMenu() {
     mobileMenuBtn.onclick = () => navLinks.classList.toggle("show");
   }
 }
-
 function updateFavoritesCount() {
   let favoritesCount = document.getElementById("favorites-count");
   favoritesCount.innerHTML = favorites.length;
 }
+function updateCartCount() {
+  let cartCount = document.getElementById("cart-count");
+  let count = 0;
+  for (let i = 0; i < cart.length; i++) {
+    count += cart[i].quantity;
+  }
+
+  cartCount.innerHTML = count;
+}
+
+
 
 function toggleFavorite(productId, button) {
   if (favorites.includes(productId)) {
@@ -92,15 +105,9 @@ function toggleCart(productId, button) {
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
 }
-function updateCartCount() {
-  let cartCount = document.getElementById("cart-count");
-  let count = 0;
-  for (let i = 0; i < cart.length; i++) {
-    count += cart[i].quantity;
-  }
 
-  cartCount.innerHTML = count;
-}
+
+
 
 function showNotification(message, flag) {
   let notification = document.getElementById("notification");
@@ -118,41 +125,8 @@ function showNotification(message, flag) {
   }, 3000);
 }
 
-
-
-
-
-
-function loadFavorites() {
-  const favoritesContainer = document.getElementById("favorites-container");
-  const favoritesEmpty = document.getElementById("favorites-empty");
-
-  if (favorites.length === 0) {
-    if (favoritesEmpty) favoritesEmpty.style.display = "block";
-    favoritesContainer.style.display = "none";
-    return;
-  }
-
-  if (favoritesEmpty) favoritesEmpty.style.display = "none";
-  favoritesContainer.style.display = "flex";
-  let products = Array.from(JSON.parse(localStorage.getItem("allProducts")));
-
-  let favoriteProducts = [];
-  for (let product of products) {
-    if (favorites.includes(product.id)) {
-      favoriteProducts.push(product);
-    }
-  }
-
-  renderProducts(favoriteProducts, "favorites-container");
-}
-
-
-
 function main() {
   mobileMenu();
   updateCartCount();
   updateFavoritesCount();
 }
-
-document.addEventListener("DOMContentLoaded", main);

@@ -1,5 +1,5 @@
-// Cart page specific script
 document.addEventListener("DOMContentLoaded", function () {
+  main();
   loadCart();
 });
 

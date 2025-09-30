@@ -12,16 +12,11 @@ function initProductPage() {
 }
 
 function filterBySearch() {
-  let search = document
-    .getElementById("search-input")
-    .value.toLowerCase();
+  let search = document.getElementById("search-input").value.toLowerCase();
   let productsFiltered = [];
-  let products = JSON.parse(localStorage.getItem("allProducts")) || [];
-
-  for (let i = 0; i < products.length; i++) {
-    let product = products[i];
-    if (search === "" || product.title.toLowerCase().includes(search)) {
-      productsFiltered.push(product);
+  for (let i = 0; i < allProducts[i].length; i++) {
+    if (search === "" || allProducts[i].title.toLowerCase().includes(search)) {
+      productsFiltered.push(allProducts[i]);
     }
   }
   renderProducts(productsFiltered, "products-container");
@@ -30,12 +25,9 @@ function filterBySearch() {
 function filterByCategory() {
   const category = document.getElementById("category-filter").value;
   let productsFiltered = [];
-  let products = JSON.parse(localStorage.getItem("allProducts")) || [];
-
-  for (let i = 0; i < products.length; i++) {
-    let product = products[i];
-    if (category === "" || product.category === category) {
-      productsFiltered.push(product);
+  for (let i = 0; i < allProducts.length; i++) {
+    if (category === "" || allProducts[i].category === category) {
+      productsFiltered.push(allProducts[i]);
     }
   }
 
@@ -43,9 +35,8 @@ function filterByCategory() {
 }
 
 function loadProducts() {
-  let products = JSON.parse(localStorage.getItem("allProducts")) || [];
-  renderProducts(products, "products-container");
-  createDropDownList(products);
+  renderProducts(allProducts, "products-container");
+  createDropDownList(allProducts);
 }
 
 function createDropDownList(products) {
