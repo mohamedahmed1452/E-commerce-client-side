@@ -14,12 +14,6 @@ body {
   margin: 0px auto;
 }
 
-
-
-
-
-
-
 /*all pages*/
 .header {
   width: 100%;
@@ -89,10 +83,6 @@ body {
   color: #f8f9fa;
 }
 
-
-
-
-
 .section-title {
   text-align: center;
   margin-top: 100px;
@@ -100,10 +90,6 @@ body {
   font-size: 40px;
   color: #6c8eff;
 }
-
-
-
-
 
 /*product and favorites */
 
@@ -187,9 +173,6 @@ body {
   color: #ff6b6b;
 }
 
-
-
-
 /*favorite and cart*/
 
 .empty-state {
@@ -205,9 +188,6 @@ body {
   margin-bottom: 20px;
 }
 
-
-
-
 /*page of home and favorite and cart */
 .btn-browse-products {
   font-size: 22px;
@@ -217,14 +197,6 @@ body {
   border-radius: 10px;
   text-decoration: none;
 }
-
-
-
-
-
-
-
-
 
 /*all pages*/
 .notification {
@@ -244,22 +216,6 @@ body {
 .notification.remove {
   background-color: #ff6b6b;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*all pages*/
 
@@ -290,12 +246,8 @@ body {
   color: #6c8eff;
 }
 
-
-
-
 @media (max-width: 768px) {
-
-    /*all pages*/
+  /*all pages*/
   .container {
     max-width: 500px;
   }
@@ -323,12 +275,7 @@ body {
     display: flex;
   }
 
-
-
-
-
-
-/*product,favorite*/
+  /*product,favorite*/
   .products-flex {
     flex-direction: column;
   }
