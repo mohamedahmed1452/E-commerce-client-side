@@ -2,6 +2,9 @@ let allProducts = JSON.parse(localStorage.getItem("allProducts")) || [];
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
+
+
+
 function renderProducts(products, containerId) {
   const container = document.getElementById(containerId);
   let cartona = "";

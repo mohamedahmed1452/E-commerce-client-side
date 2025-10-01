@@ -1,7 +1,7 @@
 .hero {
   padding-top: 80px;
   height: 100vh;
-  background-image: url('../assets/ecommerce-laptop-computer-shopping-trolley-white-gift-blue-ribbon-dark-background-website-retail-business-concept-easy-218161920.webp');
+  background-image: url('../assets/black-friday-sales-sign-neon-light.jpg');
   background-size: 100% 100%;
   object-fit: contain;
 }
@@ -23,10 +23,6 @@
   font-size: 30px;
 }
 
-
-
-
-
 @keyframes moveDownToUp {
   0% {
     opacity: 0;
@@ -37,9 +33,6 @@
     transform: translateY(0);
   }
 }
-
-
-
 
 .btn-show-container {
   text-align: center;
