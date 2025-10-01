@@ -2,9 +2,6 @@ let allProducts = JSON.parse(localStorage.getItem("allProducts")) || [];
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-
-
-
 function renderProducts(products, containerId) {
   const container = document.getElementById(containerId);
   let cartona = "";
@@ -43,9 +40,6 @@ function renderProducts(products, containerId) {
   container.innerHTML = cartona;
 }
 
-
-
-
 function mobileMenu() {
   const mobileMenuBtn = document.querySelector(".mobile-menu .bn");
   const navLinks = document.querySelector(".nav-bar .links");
@@ -55,10 +49,12 @@ function mobileMenu() {
   }
 }
 function updateFavoritesCount() {
+  favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   let favoritesCount = document.getElementById("favorites-count");
   favoritesCount.innerHTML = favorites.length;
 }
 function updateCartCount() {
+  cart = JSON.parse(localStorage.getItem("cart")) || [];
   let cartCount = document.getElementById("cart-count");
   let count = 0;
   for (let i = 0; i < cart.length; i++) {
@@ -67,8 +63,6 @@ function updateCartCount() {
 
   cartCount.innerHTML = count;
 }
-
-
 
 function toggleFavorite(productId, button) {
   if (favorites.includes(productId)) {
@@ -108,9 +102,6 @@ function toggleCart(productId, button) {
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
 }
-
-
-
 
 function showNotification(message, flag) {
   let notification = document.getElementById("notification");

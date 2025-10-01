@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   main();
   loadCheckout();
 
-  let form = document.getElementById('checkout-form');
+  let form = document.getElementById("checkout-form");
   if (form) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener("submit", function (e) {
       e.preventDefault(); // stop page refresh
       processOrder();
     });
@@ -12,22 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function loadCheckout() {
-  const checkoutEmpty = document.getElementById('checkout-empty');
-  const checkoutContent = document.getElementById('checkout-content');
+  const checkoutEmpty = document.getElementById("checkout-empty");
+  const checkoutContent = document.getElementById("checkout-content");
 
   if (cart.length === 0) {
-    checkoutEmpty.style.display = 'block';
-    checkoutContent.style.display = 'none';
+    checkoutEmpty.style.display = "block";
+    checkoutContent.style.display = "none";
   } else {
-    checkoutEmpty.style.display = 'none';
-    checkoutContent.style.display = 'block';
+    checkoutEmpty.style.display = "none";
+    checkoutContent.style.display = "block";
     renderCheckoutSummary(cart, allProducts);
   }
 }
 
 function renderCheckoutSummary(cart, products) {
-  const container = document.getElementById('checkout-summary');
-  let cartona = '';
+  const container = document.getElementById("checkout-summary");
+  let cartona = "";
   let subtotal = 0;
 
   for (let item of cart) {
@@ -63,9 +63,9 @@ function renderCheckoutSummary(cart, products) {
 }
 
 function processOrder() {
-  localStorage.removeItem('cart');
-  document.getElementById('checkout-content').style.display = 'none';
-  document.getElementById('order-success').style.display = 'block';
-
+  localStorage.removeItem("cart");
+  document.getElementById("checkout-content").style.display = "none";
+  document.getElementById("order-success").style.display = "block";
+  localStorage.removeItem("cart");
   updateCartCount();
 }
