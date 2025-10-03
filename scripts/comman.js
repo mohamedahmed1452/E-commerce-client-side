@@ -41,12 +41,11 @@ function renderProducts(products, containerId) {
 }
 
 function mobileMenu() {
-  const mobileMenuBtn = document.querySelector(".mobile-menu .bn");
-  const navLinks = document.querySelector(".nav-bar .links");
-
-  if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.onclick = () => navLinks.classList.toggle("show");
-  }
+  let mobileMenuBtn = document.querySelector(".mobile-menu .bn");
+  let navLinks = document.querySelector(".nav-bar .links");
+  mobileMenuBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
 }
 function updateFavoritesCount() {
   favorites = JSON.parse(localStorage.getItem("favorites")) || [];

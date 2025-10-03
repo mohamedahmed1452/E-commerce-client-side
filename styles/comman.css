@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI';
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #f8f9fa;
   background-color: #2d3748;
 }
@@ -16,22 +16,22 @@ body {
 
 /*all pages*/
 .header {
-  width: 100%;
-  background: #1a202c;
   position: fixed;
+  background: #1a202c;
+  width: 100%;
   top: 0;
   z-index: 100;
 }
 
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 15px 0;
 }
 
 .logo a {
-  font-size: 1.8rem;
+  font-size: 32px;
   font-weight: 700;
   color: #6c8eff;
   text-decoration: none;
@@ -40,12 +40,10 @@ body {
 .nav-bar .links {
   display: flex;
   list-style: none;
-  align-items: center;
+  gap: 30px;
 }
 
-.nav-bar .links li {
-  margin: 0 10px;
-}
+
 
 .nav-bar .links a {
   text-decoration: none;
@@ -53,10 +51,12 @@ body {
   font-weight: 500;
 }
 
-.nav-bar .links a:hover {
+ .links a:hover {
   color: #7c6bff;
 }
-
+.icon-badge {
+  position: relative;
+}
 .nav-bar .links .badge {
   background-color: #ff6b6b;
   width: 15px;
@@ -70,18 +70,19 @@ body {
   bottom: 15px;
   left: 8px;
 }
-.icon-badge {
-  position: relative;
-  display: inline-block;
-}
+
+
 
 .mobile-menu .bn {
   display: none;
   background: none;
   border: none;
-  font-size: 25px;
+  font-size: 30px;
   color: #f8f9fa;
 }
+
+
+
 
 .section-title {
   text-align: center;
@@ -246,34 +247,40 @@ body {
   color: #6c8eff;
 }
 
+
+
 @media (max-width: 768px) {
-  /*all pages*/
-  .container {
-    max-width: 500px;
-  }
+
+
   .header-content {
-    max-width: 350px;
-    margin: 0px auto;
+   margin: 0px auto;
+    width: 90%;
     flex-wrap: wrap;
-  }
-
-  .nav-bar {
-    width: 100%;
-  }
-
-  .nav-bar .links {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 30px;
-    gap: 20px;
+    justify-content: space-between;
   }
   .mobile-menu .bn {
     display: block;
   }
+  .nav-bar {
+    width: 100%;
+  }
+  .nav-bar .links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
   .nav-bar .show {
     display: flex;
   }
+
+
+
+
+
+
 
   /*product,favorite*/
   .products-flex {

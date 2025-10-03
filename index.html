@@ -3,19 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MiniMart - Your Mini E-commerce Store</title>
+    <title>MiniMart</title>
     <link rel="stylesheet" href="styles/comman.css" />
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/all.min.css" />
   </head>
 
-
-
-
-
   <body>
     <header class="header">
-      <div class="container header-content">
+      <div class="header-content">
         <div class="logo">
           <a href="index.html">Mini Markt</a>
         </div>
@@ -32,7 +28,7 @@
               <a href="favorites.html">
                 <span class="icon-badge">
                   <i class="fas fa-heart"></i>
-                  <span class="badge" id="favorites-count"></span>
+                  <div class="badge" id="favorites-count"></div>
                 </span>
                 Favorites
               </a>
@@ -41,7 +37,7 @@
               <a href="cart.html">
                 <span class="icon-badge">
                   <i class="fas fa-shopping-cart"></i>
-                  <span class="badge" id="cart-count"></span>
+                  <div class="badge" id="cart-count"></div>
                 </span>
                 Cart
               </a>
@@ -51,43 +47,22 @@
       </div>
     </header>
 
-
-
-
-
-
     <section class="hero">
       <div class="container">
         <h1>Welcome to Mini Markt</h1>
-        <p>
-          Shop more, spend less it''s that simple.
-        </p>
+        <p>Shop more and spend less</p>
       </div>
     </section>
 
-
-
-
-
-
-
     <main class="container">
-        <h2 class="section-title">Featured Products</h2>
-        <div class="products-flex" id="featured-products"></div>
-        <div class="btn-show-container">
-          <a href="products.html" class="btn-browse-products"
-            >Browse Products</a
-          >
-        </div>
+      <h2 class="section-title">Featured Products</h2>
+      <div class="products-flex" id="featured-products"></div>
+      <div class="btn-show-container">
+        <a href="products.html" class="btn-browse-products">Browse Products</a>
+      </div>
     </main>
 
-
-
-
     <div id="notification" class="notification"></div>
-
-
-
 
     <footer class="site-footer">
       <div class="footer-info">
@@ -117,8 +92,4 @@
     <script src="scripts/comman.js"></script>
     <script src="scripts/index.js"></script>
   </body>
-
-
-
-
 </html>
